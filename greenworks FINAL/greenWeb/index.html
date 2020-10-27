@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+<!--
+	Spatial by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Greenworks</title>
+		<link rel = "icon" href = "images/icon.png" type = "image/x-icon"> 
+		
+		<script src="https://www.gstatic.com/firebasejs/ui/4.4.0/firebase-ui-auth.js"></script>
+		<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.4.0/firebase-ui-auth.css" />
+		
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
+		
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../greenWeb/assets/css/main.css" />
+		
+		
+		<!-- Global site tag (gtag.js) - Google Analytics | ALYSSA-->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162415370-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-162415370-1');
+		</script>
+		
+		<script>
+function getVote(int) {
+  if (window.XMLHttpRequest) {
+    // code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+  } else {  // code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("poll").innerHTML=this.responseText;
+    }
+  }
+  xmlhttp.open("GET","poll_vote.php?vote="+int,true);
+  xmlhttp.send();
+}
+</script>
+		
+	</head>
+	
+	
+	<script>
+
+</script>
+	
+	<body class="landing">
+
+		<!-- Header -->
+			<header id="header" class="alt">
+				<h1 class = "title"><strong><a href="../greenWeb/index.html" style = "color:rgba(255,255,255,1.00);">Greenworks</a></strong></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="../greenWeb/index.html">Home</a></li>
+						<li><a href="../greenWeb/aboutUS.html">About Us</a></li>
+						<li><a href="../greenWeb/myitem.html">What is my item</a></li>
+						<li><a href="../greenWeb/locations.html">Locations</a></li>
+						<li><a href="../greenWeb/live.html">Live Sustainably</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+		<!-- Banner -->
+			<section id="banner">
+<a href="../greenWeb/index.html" id = "logo"><img src = "images/greenworks_logo.png" style = "width: 260px; margin-left:10px; margin-top:10px;"></a>				
+		<p>Put your waste <br /> in the right place</p>
+				<ul class="actions">
+					<li><a href="../greenWeb/myitem.html" class="button special big">Get Started</a></li>
+				</ul>
+			</section>
+		
+			<!-- One -->
+				<section id="one" class="wrapper style1">
+					<div class="container 75%">
+						<div class="row 200%">
+							<div class="6u 12u$(medium)">
+								<header class="major">
+									
+									<h2 style=>Composting and recycling alone have prevented 85 million tons of waste to be dumped in 2010.</h2>
+									<p>This is the power of a small change.</p>
+								</header>
+								<button class="open-button" onclick="openForm()">Take a Quick Poll</button>
+
+
+								<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+	  <script type="text/javascript">
+(function(d,s,id,u){
+  if (d.getElementById(id)) return;
+  var js, sjs = d.getElementsByTagName(s)[0],
+      t = Math.floor(new Date().getTime() / 1000000);
+  js=d.createElement(s); js.id=id; js.async=1; js.src=u+'?'+t;
+  sjs.parentNode.insertBefore(js, sjs);
+}(document, 'script', 'os-widget-jssdk', 'https://www.opinionstage.com/assets/loader.js'));
+</script><div class="os_poll" data-path="/polls/2632633" id="os-widget-662352"></div>
+  
+    <button type="button" class="cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+							</div>
+							<div class="6u$ 12u$(medium)">
+													
+				<iframe title="Number of plastic bags produced" src="https://www.theworldcounts.com/embed/challenges/105?background_color=white&color=rgba(82,82,82,1.00)&font_family=%22Verdana%22%2C+Verdana%2C+sans-serif&font_size=25" style="border: none" width="100%"></iframe>
+																
+									
+				<iframe title="Number of planet Earths we need" src="https://www.theworldcounts.com/embed/challenges/83?background_color=white&color=rgba(82,82,82,1.00)&font_family=%22Verdana%22%2C+Verdana%2C+sans-serif&font_size=25" style="border: none" width="100%"></iframe>
+								
+								<p style = "font-size:18px;">Environmental awareness is something that needs more attention for a positive impact. Any one action or human can help. For example, did you know that the amount  of plastic bags and materials thrown into the ocean can kill as many as one million sea creatures anually? And that's just one impact of pollution on the ocean. An estimated 50,000 speices inhabiting our tropical forests become extinct anually; that's almost 137 species in one day! Pollution is harming our Earth each and every day and you can help reduce the harmful affects by small actions everyday. Real change is needed and it's needed now.</p>
+						
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Two (Data Retrieval) style4 special -->
+				<section id="two" class="wrapper style3 special"> 
+					<div class="container">
+						<header class="major">
+							<h2 style = "color:#E0E0E0;">Check your<br />Resin Identification Code</h2>
+							<p style = "color:#E0E0E0;">located on your plastic object<br />Inside a chasing arrows triangle.</p>
+						</header>
+					
+						<!-- get user input and retrieve data from firebase DAVINA --
+						<!--<input type="number" id="resinnum" required="required" min="1" max="7"> -->
+						<input type ="image" class ="navPageButton"  onclick="getdata(1)" src="images/resinOne.png"/>
+						<input type ="image" class ="navPageButton"  onclick="getdata(2)" src="images/resinTwo.png"/>
+						<input type ="image" class ="navPageButton"  onclick="getdata(3)" src="images/resinThree.png"/>
+						<input type ="image" class ="navPageButton"  onclick="getdata(4)" src="images/resinFour.png"/>
+						<input type ="image" class ="navPageButton"  onclick="getdata(5)" src="images/resinFive.png"/>
+						<input type ="image" class ="navPageButton"  onclick="getdata(6)" src="images/resinSix.png"/>
+						<input type ="image" class ="navPageButton"  onclick="getdata(7)" src="images/resinSeven.png"/>
+					
+						<br><br>
+						<div class = "row" style = "width: 80%;">
+							<div class = "column" style = "width: 50%;">
+						<p style = "color:#E0E0E0; font-size: 20px; text-align: left;">Recycling Number: <strong id="num" class = "datatext"></strong></p>
+						<p style = "color:#E0E0E0; font-size: 20px; text-align: left;">Abbreviation: <strong id="abbrev" class = "datatext"></strong></p> 
+						<p style = "color:#E0E0E0; font-size: 20px; text-align: left;">Name: <strong id="name" class = "datatext"></strong></p> 
+						<p style = "color:#E0E0E0; font-size: 20px; text-align: left;">Production: <strong id="material" class = "datatext"></strong></p>
+						 </div>
+						<div class = "column" style = "width: 50%;">
+						<p style = "color:#E0E0E0; font-size: 20px; text-align: left;">Uses: <strong id="use" class = "datatext"></strong></p> 
+						<p style = "color:#E0E0E0; font-size: 20px; text-align: left;">Recycling: <strong id="recycle" class = "datatext"></strong></p> 
+						<p style = "color:#E0E0E0; font-size: 20px; text-align: left;">Alternatives: <strong id="alternative" class = "datatext"></strong></p>
+						</div>
+						</div>
+					</div></section>
+
+							
+			<!-- Three -->
+				<section id="three" class="wrapper style1">
+					<div class="container">
+						<header class="major special">
+							<h2>Benefits of recycling</h2>
+							<p>Here are the facts:</p>
+						</header>
+						<div class="feature-grid">
+							<div class="feature">
+								<div class="image rounded"><img src="../greenWeb/images/pic04.jpg" alt="" /></div>
+								<div class="content">
+									<header>
+										<h4 style = "font-size:16px;">Conserves natural resources</h4>
+										<p>Fossil fuel consumption has rapidly increased in the last 200 years, leaving reserves depleted.</p>
+									</header>
+									<p style = "font-size:16px;">Recycling plastic and other materials are beneficial because they save trees, fossil fuels, and raw materials.</p>
+								</div>
+							</div>
+							<div class="feature">
+								<div class="image rounded"><img src="../greenWeb/images/pic05.jpg" alt="" /></div>
+								<div class="content">
+									<header>
+										<h4 style = "font-size:16px;">Cuts climate-changing carbon emissions</h4>
+										<p>For every ton of plastic that is produced, three tons of CO2 emissions are created.</p>
+									</header>
+									<p style = "font-size:16px;">Recyling means using less energy and less sourcing for new materials. This lowers carbon emissions and keeps any methane-releasing waste out of landfill sites.</p>
+								</div>
+							</div>
+							<div class="feature">
+								<div class="image rounded"><img src="../greenWeb/images/pic06.jpg" alt="" /></div>
+								<div class="content">
+									<header>
+										<h4 style = "font-size:16px;">Saves energy</h4>
+										<p>A one-liter plastic bottle uses about two liters of water during this process.</p>
+									</header>
+									<p style = "font-size:16px;">Making products from recycled materials require a lot less energy than creating them from new raw materials.</p>
+								</div>
+							</div>
+							<div class="feature">
+								<div class="image rounded"><img src="../greenWeb/images/pic07.jpg" alt="" /></div>
+								<div class="content">
+									<header>
+										<h4 style = "font-size:16px;">Protects ecosystems and wildlife</h4>
+										<p>7 billion trees are cut down each year.</p>
+									</header>
+									<p style = "font-size:16px;">Reduces the number of harmful disruptions and damages being done to the natural world: less deforestation, less animals harmed or displaced, and less pollution of water, air and soil.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Four -->
+				<section id="four" class="wrapper style3 special">
+					<div class="container">
+						<header class="major">
+							<h2>Questions?</h2>
+							<p>Send your questions/feedback to The Brogrammers</p>
+						</header>
+						<ul class="actions">
+							<li><a target="_blank" href="https://www.facebook.com/mugreenworks" class="button special big">Get in touch</a></li>
+						</ul>
+					</div>
+				</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a target="_blank" href="https://www.facebook.com/mugreenworks" class="icon fa-facebook"></a></li>
+						<li><a target="_blank" href="https://twitter.com/Greenworks19" class="icon fa-twitter"></a></li>
+						<li><a target="_blank" href="https://www.instagram.com/mugreenworks20/" class="icon fa-instagram"></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>MU GREENWORKS, LLC. &copy; 2020</li>
+						<li>The Brogrammers</li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="../greenWeb/assets/js/jquery.min.js"></script>
+			<script src="../greenWeb/assets/js/skel.min.js"></script>
+			<script src="../greenWeb/assets/js/util.js"></script>
+			<script src="../greenWeb/assets/js/main.js"></script>
+			<script src="assets/js/firebase.js"></script>
+			
+								
+		
+		<!-- Linking Firebase to Web App -->	
+
+		<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+		<script src="/__/firebase/7.14.2/firebase-app.js"></script>
+
+		<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+		<script src="/__/firebase/7.14.2/firebase-analytics.js"></script>
+	  
+		<!-- Add Firebase products that you want to use -->
+		<script src="/__/firebase/7.14.2/firebase-auth.js"></script>
+		<script src="/__/firebase/7.14.2/firebase-firestore.js"></script>
+		
+		<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+	</body>
+</html>

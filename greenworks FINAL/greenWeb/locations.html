@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+<!--
+	Spatial by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Recycling Centers Near Me</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+	<link rel = "icon" href = "../greenWeb/images/icon.png" type = "image/x-icon"> 
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../greenWeb/assets/css/main.css" />
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 50%;
+        width: 50%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+
+    <script>
+
+      var map;
+      var service;
+      var infowindow;
+     
+      // start at 3 b/c 1&2 can be recycled at home
+      var locationName3 = 'Computer Recycling';
+      var locationName4='Lowes';
+      var locationName5='Whole Foods';
+      var locationName6 = 'Waste Management';
+      var locationName7 = 'Recycle Center';
+
+      function initMap() {
+        var user_location = new google.maps.LatLng(0, 0);
+
+        infowindow = new google.maps.InfoWindow();
+
+        map = new google.maps.Map(
+            document.getElementById('map'), {center: user_location, zoom: 9});
+
+        //plastics 1&2 can be recycled at home
+        var request3 = {            
+          query: locationName3,
+          fields: ['name', 'geometry', 'formatted_address', 'opening_hours'],
+        };
+        var request4 = {            
+          query: locationName4,
+          fields: ['name', 'geometry', 'formatted_address', 'opening_hours'],
+        };
+        var request5 = {            
+          query: locationName5,
+          fields: ['name', 'geometry', 'formatted_address', 'opening_hours'],
+        };
+        var request6 = {            
+          query: locationName6,
+          fields: ['name', 'geometry', 'formatted_address', 'opening_hours'],
+        };
+        var request7 = {            
+          query: locationName7,
+          fields: ['name', 'geometry', 'formatted_address', 'opening_hours'],
+        };
+
+        service = new google.maps.places.PlacesService(map);
+
+        service.findPlaceFromQuery(request3, function(results, status) {
+          if (status === google.maps.places.PlacesServiceStatus.OK) {
+            for (var i = 0; i < results.length; i++) {
+              createMarker(results[i], '3');
+            }
+
+            map.setCenter(results[0].geometry.location);
+          }
+        });
+        service.findPlaceFromQuery(request4, function(results, status) {
+          if (status === google.maps.places.PlacesServiceStatus.OK) {
+            for (var i = 0; i < results.length; i++) {
+              createMarker(results[i], '4');
+            }
+
+            map.setCenter(results[0].geometry.location);
+          }
+        });
+        service.findPlaceFromQuery(request5, function(results, status) {
+          if (status === google.maps.places.PlacesServiceStatus.OK) {
+            for (var i = 0; i < results.length; i++) {
+              createMarker(results[i], '5');
+            }
+
+            map.setCenter(results[0].geometry.location);
+          }
+        });
+        service.findPlaceFromQuery(request6, function(results, status) {
+          if (status === google.maps.places.PlacesServiceStatus.OK) {
+            for (var i = 0; i < results.length; i++) {
+              createMarker(results[i], '6');
+            }
+
+            map.setCenter(results[0].geometry.location);
+          }
+        });
+        service.findPlaceFromQuery(request7, function(results, status) {
+          if (status === google.maps.places.PlacesServiceStatus.OK) {
+            for (var i = 0; i < results.length; i++) {
+              createMarker(results[i], '7');
+            }
+            place.num=7;
+
+            map.setCenter(results[0].geometry.location);
+          }
+        });
+      }
+
+      function createMarker(place, plasticNumber) {
+        var marker = new google.maps.Marker({
+          map: map,
+	  label: plasticNumber,
+          position: place.geometry.location
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+            
+        var markerInfo= '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<div id="bodyContent">'+
+            '<p><b>'+place.name+'</b></p>'+
+            '<p>'+place.formatted_address+'</p>'+
+            '</div>';
+
+          infowindow.setContent(markerInfo);
+          infowindow.open(map, this);
+        });
+      }
+    </script>
+	</head>
+	<body>
+		<!-- Header -->
+			<header id="header" class="alt">
+				<h1 class = "title"><strong><a href="../greenWeb/index.html" style = "color:rgba(0, 100, 0, 1);">Greenworks</a></strong></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="../greenWeb/index.html">Home</a></li>
+						<li><a href="../greenWeb/aboutUS.html">About Us</a></li>
+						<li><a href="../greenWeb/myitem.html">What is my item</a></li>
+						<li><a href="../greenWeb/locations.html">Locations</a></li>
+						<li><a href="../greenWeb/live.html">Live Sustainably</a></li>
+					</ul>
+				</nav>
+			</header>
+
+
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+		<!-- Main -->
+		
+		<header class="major special">
+					</header>
+<br><br>
+		
+		<div id="map" style = "display:block; margin:auto; border: medium; width: 80%;"></div>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUF2IB3LoHL08k9jHHCkUuHrXWpBUw0gs&libraries=places,geometry&callback=initMap"></script>
+
+			<section id="main" class="wrapper">
+				<div class="container">
+
+					<header class="major special">
+						<h2>Recycling Centers Near You</h2>
+						<p>Use our map to make a change today!</p>
+						<hr>
+					</header>
+					
+					<p style = "font-size:18px;"> Every city or town have their own recycling methods but most are required to have recycling collection and center operation. Look into your city's recycling rules and regulations to know their guidelines and what kinds of products they recycle. Recyclable plastics are usually given to recycling centers in order to be processed, breaked down into raw materials, and manufactured into new products. Before you recycle, here's three rules Waste Management, or WM, have for recycling: </p>
+					<ul class = "leaf">
+						<li style = "font-size:18px;">Recycle clean bottles, cans, paper, and cardboard</li>
+						<li style = "font-size:18px;"> Keep food and liquid out of your recycling</li>
+						<li style = "font-size:18px;">No loose plastic bags and no bagged recyclables.</li>
+					</ul>
+					<div class = "row">
+					<div class = "column" style = "width:25%;">
+						<img src = "images/recycle.jpeg" class = "img-fluid" style = "width: 100%;">
+					</div>
+					<div class = "column" style = "width: 75%;">
+					<p style = "font-size:18px; margin-left: 15px;">The map above displays all recycling centers near you - no need to search it up yourself! Just keep in mind that, as mentioned before, for each plastic there can be different recycling centers. If you cannot find a recycling center that accepts the plastic product you have, contact your local stores and determine if they have their own recycling programs. The best thing we can do as consumers is to throw away as little as possible. Incorporating small things into daily life like getting your own container for foods and beverages can help - check out our Live Sustainably Page for more alternatives to wasting plastic. We appreciate you participating in helping the world become a healthier, cleaner place to live!</p></div>
+						</div>
+
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a target="_blank" href="https://www.facebook.com/mugreenworks" class="icon fa-facebook"></a></li>
+						<li><a target="_blank" href="https://twitter.com/Greenworks19" class="icon fa-twitter"></a></li>
+						<li><a target="_blank" href="https://www.instagram.com/mugreenworks20/" class="icon fa-instagram"></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>MU GREENWORKS, LLC. &copy; 2020</li>
+						<li>The Brogrammers</li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="../greenWeb/assets/js/jquery.min.js"></script>
+			<script src="../greenWeb/assets/js/skel.min.js"></script>
+			<script src="../greenWeb/assets/js/util.js"></script>
+			<script src="../greenWeb/assets/js/main.js"></script>
+
+	</body>
+</html>

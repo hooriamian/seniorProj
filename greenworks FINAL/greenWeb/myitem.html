@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<!--
+	Spatial by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>What is My Item?</title>
+		<link rel = "icon" href = "../greenWeb/images/icon.png" type = "image/x-icon"> 
+		
+		<script src="https://www.gstatic.com/firebasejs/ui/4.4.0/firebase-ui-auth.js"></script>
+		<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.4.0/firebase-ui-auth.css" />
+		
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
+		
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../greenWeb/assets/css/main.css" />
+		
+		
+		<!-- Global site tag (gtag.js) - Google Analytics | ALYSSA-->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162415370-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-162415370-1');
+		</script>
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header" class="alt">
+				<h1 class = "title"><strong><a href="../greenWeb/index.html" style = "color:rgba(0, 100, 0, 1);">Greenworks</a></strong></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="../greenWeb/index.html">Home</a></li>
+						<li><a href="../greenWeb/aboutUS.html">About Us</a></li>
+						<li><a href="../greenWeb/myitem.html">What is my item</a></li>
+						<li><a href="../greenWeb/locations.html">Locations</a></li>
+						<li><a href="../greenWeb/live.html">Live Sustainably</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="container">
+					
+						<header class="major"><h2>What is My Item?</h2></header>
+					<p style = "text-align: center; margin:auto; font-size: 18px;"> This short quiz can help you quickly determine the resin code of your item when not easily available to you.<br>
+
+					If your item is a glass item please refer to your local recycling center for further information.<br>
+
+					We hope you will use this in order to properly recycle and help us build a more sustainable future.<br>
+
+						Thank you for doing your part!</p>
+						<br>
+					
+					<h2 style = "text-align: center;">Don't Know what your item is?</h2>
+						
+							
+					<div id="interact-5e83aa89658bed00148aa976"></div><script type="text/javascript">var app_5e83aa89658bed00148aa976;(function(d, t){var s=d.createElement(t),options={"appId":"5e83aa89658bed00148aa976","aspect_ratio":"100%","async":true,"host":"quiz.tryinteract.com","footer":"show"};s.src='https://i.tryinteract.com/embed/app.js';s.onload=s.onreadystatechange=function(){var rs=this.readyState;if(rs)if(rs!='complete')if(rs!='loaded')return;try{app_5e83aa89658bed00148aa976=new InteractApp();app_5e83aa89658bed00148aa976.initialize(options);app_5e83aa89658bed00148aa976.display();}catch(e){}};var scr=d.getElementsByTagName(t)[0],par=scr.parentNode;par.insertBefore(s,scr);})(document,'script');</script>				
+				</div>
+				
+				<hr style="width: 100%">
+					
+					<!-- Two (Data Retrieval) style4 special --> 
+					<section id="two" class="wrapper style5 special"> 
+							<h2 style = "color:#FFF">Check your Resin Identification Code.</h2>
+							<h5 style = "color:#FFF">This is located on your plastic object Inside a chasing arrows triangle.</h5>
+								<br>
+					
+						<!-- get user input and retrieve data from firebase DAVINA -->
+						<!--<input type="number" id="resinnum" required="required" min="1" max="7"> -->
+						<input type ="image" class ="navPageButton"  onclick="getdata(1)" src="images/resinOne.png"/>
+						<input type ="image" class ="navPageButton"  onclick="getdata(2)" src="images/resinTwo.png"/>
+						<input type ="image" class ="navPageButton"  onclick="getdata(3)" src="images/resinThree.png"/>
+						<input type ="image" class ="navPageButton"  onclick="getdata(4)" src="images/resinFour.png"/>
+						<input type ="image" class ="navPageButton"  onclick="getdata(5)" src="images/resinFive.png"/>
+						<input type ="image" class ="navPageButton"  onclick="getdata(6)" src="images/resinSix.png"/>
+						<input type ="image" class ="navPageButton"  onclick="getdata(7)" src="images/resinSeven.png"/>
+
+					<br><br>
+						<br><br>
+						<div class = "row" style = "width: 80%;">
+							<div class = "column" style = "width: 50%;">
+						<p style = "color:#E0E0E0; font-size: 20px; text-align: left;">Recycling Number: <strong id="num" class = "datatext"></strong></p>
+						<p style = "color:#E0E0E0; font-size: 20px; text-align: left;">Abbreviation: <strong id="abbrev" class = "datatext"></strong></p> 
+						<p style = "color:#E0E0E0; font-size: 20px; text-align: left;">Name: <strong id="name" class = "datatext"></strong></p> 
+						<p style = "color:#E0E0E0; font-size: 20px; text-align: left;">Production: <strong id="material" class = "datatext"></strong></p>
+						 </div>
+						<div class = "column" style = "width: 50%;">
+						<p style = "color:#E0E0E0; font-size: 20px; text-align: left;">Uses: <strong id="use" class = "datatext"></strong></p> 
+						<p style = "color:#E0E0E0; font-size: 20px; text-align: left;">Recycling: <strong id="recycle" class = "datatext"></strong></p> 
+						<p style = "color:#E0E0E0; font-size: 20px; text-align: left;">Alternatives: <strong id="alternative" class = "datatext"></strong></p>
+						</div>
+						</div>
+					</section>
+					
+		</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a target="_blank" href="https://www.facebook.com/mugreenworks" class="icon fa-facebook"></a></li>
+						<li><a target="_blank" href="https://twitter.com/Greenworks19" class="icon fa-twitter"></a></li>
+						<li><a target="_blank" href="https://www.instagram.com/mugreenworks20/" class="icon fa-instagram"></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>MU GREENWORKS, LLC. &copy; 2020</li>
+						<li>The Brogrammers</li>
+					</ul>
+				</div>
+			</footer>
+
+	<!-- Scripts -->
+			<script src="../greenWeb/assets/js/jquery.min.js"></script>
+			<script src="../greenWeb/assets/js/skel.min.js"></script>
+			<script src="../greenWeb/assets/js/util.js"></script>
+			<script src="../greenWeb/assets/js/main.js"></script>
+			<script src="../greenWeb/assets/js/firebase.js"></script>
+		
+				
+		<!-- Linking Firebase to Web App -->	
+
+		<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+		<script src="/__/firebase/7.14.2/firebase-app.js"></script>
+
+		<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+		<script src="/__/firebase/7.14.2/firebase-analytics.js"></script>
+	  
+		<!-- Add Firebase products that you want to use -->
+		<script src="/__/firebase/7.14.2/firebase-auth.js"></script>
+		<script src="/__/firebase/7.14.2/firebase-firestore.js"></script>
+	</body>
+</html>

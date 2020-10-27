@@ -1,0 +1,66 @@
+{
+  "resinNum" : [ null, {
+    "abbreviation" : "PETE or PET",
+    "alternatives" : "Switching to reusable beverage containers, replace disposable food packaging with reusable alternatives",
+    "degradation" : "-",
+    "polymerName" : "Polyethylene Terephthalate",
+    "production" : "Produced from ethylene glycol and dimethyl terephthalate or terephthalic acid ",
+    "recycling" : "25% recycled; Picked up by most curbside recycling programs",
+    "recyclingNum" : 1,
+    "uses" : "Polyester fibers, tote bags, furniture, carpet, sheets, paneling, soft drink bottles, alcoholic beverages, detergents, cosmetics, cosmetic bags, mineral water, fruit juice container, cooking oil, pharmaceutical products, edible oils, water resistant paper"
+  }, {
+    "abbreviation" : "HDPE or PE-HD",
+    "alternatives" : "Switch to reusable produce bags",
+    "degradation" : "-",
+    "polymerName" : "High-Density Polyethylene",
+    "production" : "This thermoplastic polymer from the monomer ethylene; sometimes also called alkathene or polythene when used for HDPE pipes",
+    "recycling" : "30-35% recycled; Picked up through most curbside recycling programs, some only allow containers with necks",
+    "recyclingNum" : 2,
+    "uses" : "Bottles, grocery bags, milk jugs, agricultural pipe, base cups, car stops, playground equipment, plastic lumber, bleaching agents, shampoo bottles, washing and shower soaps"
+  }, {
+    "abbreviation" : "PVC or V",
+    "alternatives" : "Replace plastic food wrap with reusable beeswax wraps, replace plastic toys reclaimed wood stuffed animals, replace PVC garden hose with a Drinking Water Safe Garden Hose",
+    "degradation" : "-",
+    "polymerName" : "Polyvinyl Chloride",
+    "production" : "Produced by polymerization of the vinyl chloride monomer (VCM)",
+    "recycling" : "Less than 1% recycled; Recycled through Vinyl and VinylPlus initiatives",
+    "recyclingNum" : 3,
+    "uses" : "Trays for sweets, fruit plastic, plastic packaging like bubble foil, food foils, pipe, window profile, siding, fencing, flooring, shower curtains, lawn chairs, non-food bottles, children's toys"
+  }, {
+    "abbreviation" : "LDPE or PE-LD",
+    "alternatives" : "Replace plastic grocery bags with fabric alternatives, replace plastic sandwich bags with platinum silicone alternatives",
+    "degradation" : "-",
+    "polymerName" : "Low-density Polyethylene, Linear Low-density Polyethylene",
+    "production" : "Thermoplastic produced by the monomer ethylene",
+    "recycling" : "Not recycled through curbside programs in most communities. Shopping bags and dry cleaning bags can be returned to stores for recycling.",
+    "recyclingNum" : 4,
+    "uses" : "Plastic bags, six pack rings, various containers, dispensing bottles, wash bottles, tubing, molded laboratory equipment, wrappings, highly-resistant snacks"
+  }, {
+    "abbreviation" : "PP",
+    "alternatives" : "Option for reusable straws, reusable water bottles and cloth diapers",
+    "degradation" : "-",
+    "polymerName" : "Polypropylene",
+    "production" : "Produced by the chain-growth polymerization from the monomer propylene",
+    "recycling" : "3% recycled; Can be recycled by some curbside programs.",
+    "recyclingNum" : 5,
+    "uses" : "Auto parts, industrial fibers, food containers, dishware, furniture, consumer luggage, lining and external borders of cars"
+  }, {
+    "abbreviation" : "PS",
+    "alternatives" : "Reusable coffe cup, compostable or reusable picnic cutlery, stainless steel takeaway containers",
+    "degradation" : "-",
+    "polymerName" : "Polystyrene",
+    "production" : "Synthetic aromatic hydrocarbon polymer made from the monomer styrene",
+    "recycling" : "35% recycled; Can be recycled by some curbside programs.",
+    "recyclingNum" : 6,
+    "uses" : "Desk accessories, hard packaging, refrigerator trays, costume jewelry, CD cases, vending cups, cafeteria trays, plastic utensils, coffee cup lids, toys, video cassettes/cases, clamshell containers, packaging peanuts, insulation boards, styrofoam"
+  }, {
+    "abbreviation" : "OTHER or O",
+    "alternatives" : "Platinum silicone or stainless steel",
+    "degradation" : "-",
+    "polymerName" : "Other plastics such as acrylic, nylon, polycarbonate, polylactic, and multilayer combinations of various plastics",
+    "production" : "Various methods, depending on the plastic used",
+    "recycling" : "Not for reuse; Not traditionally recycled by curbside programs, some communities have initiated programs for Number 7 plastics.",
+    "recyclingNum" : 7,
+    "uses" : "Bottles, plastic lumbar applications, headlight lenses, safety shields, safety glasses"
+  } ]
+}
